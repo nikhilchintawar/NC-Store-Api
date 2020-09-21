@@ -4,6 +4,8 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=250)
+    linkUrl = models.CharField(max_length=50, blank=True, null=True)
+    imageUrl = models.ImageField(upload_to='menu/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
